@@ -20,9 +20,14 @@ def main():
 
     # access the value based on a key
     print(vegetables.get("cabbage"))
-    print(vegetables)
+    #print(vegetables)
     print(vegetables.pop("onion"))
-    print(vegetables)
+    #print(vegetables)
+    listOfKeys = vegetables.keys()
+    listOfKeys = list(listOfKeys)
+
+    for element in listOfKeys:
+        print(element)
 
     
 
