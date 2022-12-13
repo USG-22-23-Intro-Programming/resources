@@ -34,8 +34,11 @@ def main():
 
     k1 = Piece(Point(140, 140), "knight", win)
     k2 = Piece(Point(300, 460), "knight", win)
+    p1 = Piece(Point(380, 540), "pawn", win)
+    
     C.getSquare(0,0).addPiece(k1)
     C.getSquare(2,4).addPiece(k2)
+    C.getSquare(3,5).addPiece(p1)
 
     while True:
         m = win.getMouse()
@@ -45,10 +48,12 @@ def main():
 
         B = C.getClick(m)
         if B:
-            print(B.getPos())
             if B.hasPiece():
-                print(B.getPiece().getName())
-                print(B.getPiece().getPos())
+                name = B.getPiece().getName()
+                pos = B.getPiece().getPos()
+                possibleMoves = B.getPiece().move()
+                print("The " + name + " at " + str(pos) + " can move:")
+                print(possibleMoves)
 
     win.close()
 

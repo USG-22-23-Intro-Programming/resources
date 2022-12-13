@@ -21,7 +21,29 @@ class Piece:
 
     def move(self):
         possibleMoves = []
+
+        if self.name == "pawn":
+            newY = self.y - 1
+            possibleMoves.append([self.x, newY])
+
+        if self.name == "queen":
+            right = 8 - self.x
+            left = self.x
+            above = self.y
+            below = 8 - self.y
+            
+                
+
+
+
+        
         if self.name == "knight":
             possibleMoves.append([3,6])
             #move like a knight
-        return False
+        return possibleMoves
+
+
+
+
+
+
