@@ -14,6 +14,12 @@ class Square:
         self.x = ((pos.getX() - 100)//80)
         self.y = ((pos.getY() - 100)//80)
 
+    def highlight(self):
+        self.r.setFill("#CE251A")
+
+    def unHighlight(self):
+        self.r.setFill("white")
+
     def getPos(self):
         return [self.x, self.y]
 
