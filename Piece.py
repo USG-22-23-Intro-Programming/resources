@@ -42,9 +42,9 @@ class Piece:
     def rookMove(self):
         possibleMoves = []
         for i in range(8):
-            if i != self.x:
-                possibleMoves.append([self.x, i])
             if i != self.y:
+                possibleMoves.append([self.x, i])
+            if i != self.x:
                 possibleMoves.append([i, self.y])
         return possibleMoves
 
