@@ -31,14 +31,20 @@ def main():
     Q = Button(win, Point(750, 680), Point(850, 760), "tomato", "QUIT")
 
     C = Chessboard(win)
+   
+    k2 = Piece([2,4], "knight", win)
+    p1 = Piece([3,5], "pawn", win)
+    King = Piece([5,5], "king", win)
+    r1 = Piece([0,0], "rook", win)
+    b1 = Piece([1,4], "bishop", win)
+    q1 = Piece([4,1], "queen", win)
 
-    k1 = Piece(Point(140, 140), "knight", win)
-    k2 = Piece(Point(300, 460), "knight", win)
-    p1 = Piece(Point(380, 540), "pawn", win)
-    
-    C.getSquare(0,0).addPiece(k1)
+    C.getSquare(4, 1).addPiece(q1)    
+    C.getSquare(1, 4).addPiece(b1)
+    C.getSquare(0,0).addPiece(r1)
     C.getSquare(2,4).addPiece(k2)
     C.getSquare(3,5).addPiece(p1)
+    C.getSquare(5,5).addPiece(King)
 
     while True:
         m = win.getMouse()
